@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Please enter new sales order</h1>
+  <p>Lets get it started!</p>
+  <form method="POST">
+      {{ form.hidden_tag() }}
+       <br>
+      {{ form.PROD_CODE.label }} {{ form.PROD_CODE() }}
+      <br>
+      {{ form.emp_id.label }} {{ form.emp_id() }}
+       <br>
+      {{ form.year.label }} {{ form.year() }}
+       <br>
+      {{ form.week_num.label }} {{ form.week_num() }}
+       <br>
+      {{ form.quantity.label }} {{ form.quantity() }}
+       <br>
+      {{ form.Extended_Service_Plan.label }} {{ form.Extended_Service_Plan() }}
+       <br>
+
+
+       <br>
+      {{ form.submit()}}
+  </form>
+</div>
+{% endblock %}
